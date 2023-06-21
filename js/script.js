@@ -169,6 +169,7 @@ const accordion = new Accordion(".accordion", {
   panelClass: "ac-panel",
   activeClass: "is-active",
   collapse: true,
+  openOnInit: [0],
 });
 
 // tabs
@@ -290,7 +291,7 @@ const playlistsLeft = document.getElementById("playlists__left");
 const playlistsBottom = document.getElementById("playlists__bottom");
 
 const broadcastsLeft = document.getElementById("broadcasts__left");
-const broadcastsCards = document.getElementById("broadcasts__cards");
+const broadcastsContent = document.getElementById("broadcasts__content");
 const broadcastsArchive = document.getElementById("broadcasts__archive");
 
 const headerLeft = document.getElementById("header__left");
@@ -309,7 +310,7 @@ function media1200() {
 // change position top media 992px
 function media992() {
   if (window.matchMedia("(max-width: 992px)").matches) {
-    broadcastsCards.append(broadcastsArchive);
+    broadcastsContent.append(broadcastsArchive);
   } else {
     broadcastsLeft.append(broadcastsArchive);
   }
